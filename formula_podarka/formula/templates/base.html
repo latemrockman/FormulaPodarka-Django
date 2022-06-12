@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %}</title>
+
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum">
+
+
+	{% block css_additional %} {% endblock %}
 </head>
 <body>
+
+<header>
+	<nav class="dws-menu">
+		<ul>
+			<li><a href="{% url 'home-page' %}"><i class="fa fa-home"></i>Главная</a></li>
+
+
+			<li><a href="{% url 'catalog-page' %}"><i class="fa fa-shopping-cart"></i>Каталог</a>
+				<ul>
+					<li><a href="#">Панно и плакетки с барельефом</a>
+						<ul>
+							<li><a href="#">Панно 1</a></li>
+							<li><a href="#">Панно 2</a></li>
+							<li><a href="#">Панно 3</a></li>
+						</ul>
+					</li>
+
+
+					<li><a href="#">Часы с барельефом</a>
+						<ul>
+							<li><a href="#">Часы 1</a></li>
+							<li><a href="#">Часы 2</a></li>
+							<li><a href="#">Часы 3</a></li>
+						</ul>
+					</li>
+
+
+					<li><a href="#">Сувениры из стекла</a>
+						<ul>
+							<li><a href="#">Сувенир 1</a></li>
+							<li><a href="#">Сувенир 2</a></li>
+							<li><a href="#">Сувенир 3</a></li>
+						</ul>
+					</li>
+
+
+					<li><a href="#">Упаковка</a>
+						<ul>
+							<li><a href="#">Упаковка 1</a></li>
+							<li><a href="#">Упаковка 2</a></li>
+							<li><a href="#">Упаковка 3</a></li>
+						</ul>
+					</li>
+				</ul>
+
+
+
+			<li><a href="{% url 'company-page' %}"><i class="fa fa-cogs"></i>О компании</a>
+				<ul>
+					<li><a href="{% url 'awards-page' %}">Награды и благодарности</a></li>
+					<li><a href="{% url 'technologies-page' %}">Технологии</a></li>
+				</ul>
+			</li>
+
+			<li><a href="{% url 'clients-page' %}"><i class="fa fa-th-list"></i>Клиентам</a>
+				<ul>
+					<li><a href="{% url 'payment-page' %}">Оплата</a></li>
+					<li><a href="{% url 'delivery-page' %}">Доставка</a></li>
+				</ul>
+			</li>
+
+			<li><a href="{% url 'contacts-page' %}"><i class="fa fa-envelope-open"></i>Контакты</a></li>
+
+		</ul>
+	</nav>
+</header>
+
+
+
 {% block content %}
+
 {% endblock %}
+<p>Текст</p>
 </body>
 </html>
