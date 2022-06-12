@@ -14,3 +14,12 @@ class Product(models.Model):
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
 
+class Category(models.Model):
+    name = models.ForeignKey(Product, on_delete=models.PROTECT, null=True)
+
+
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+
+
