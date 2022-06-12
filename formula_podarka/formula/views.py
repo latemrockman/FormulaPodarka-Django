@@ -8,28 +8,28 @@ def index(request):
     return render(request, 'formula/index.html', {})
 
 def catalog(request):
-    pass
+    return render(request, 'formula/catalog.html', {})
 
 def company(request):
-    pass
+    return render(request, 'formula/company.html', {})
 
 def awards(request):
-    pass
+    return render(request, 'formula/awards.html', {})
 
 def technologies(request):
-    pass
+    return render(request, 'formula/technologies.html', {})
 
 def clients(request):
-    pass
+    return render(request, 'formula/clients.html', {})
 
 def payment(request):
-    pass
+    return render(request, 'formula/payment.html', {})
 
 def delivery(request):
-    pass
+    return render(request, 'formula/delivery.html', {})
 
 def contacts(request):
-    pass
+    return render(request, 'formula/contacts.html', {})
 
 
 
