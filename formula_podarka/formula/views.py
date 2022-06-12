@@ -6,8 +6,8 @@ from .models import Category, Product
 
 
 def index(request):
-    categories = Category.objects.all()
-    products = Product.objects.all()
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
     context = {
         'categories' : categories,
         'products'   : products
@@ -15,9 +15,8 @@ def index(request):
     return render(request, 'formula/index.html', context)
 
 def catalog(request):
-
-    categories = Category.objects.all()
-    products = Product.objects.all()
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
 
     context = {
         'categories' : categories,
@@ -27,8 +26,9 @@ def catalog(request):
     return render(request, 'formula/catalog.html', context)
 
 def company(request):
-    categories = Category.objects.all()
-    products = Product.objects.all()
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
+
     context = {
         'categories' : categories,
         'products'   : products
@@ -36,8 +36,9 @@ def company(request):
     return render(request, 'formula/company.html', context)
 
 def awards(request):
-    categories = Category.objects.all()
-    products = Product.objects.all()
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
+
     context = {
         'categories' : categories,
         'products'   : products
@@ -45,8 +46,9 @@ def awards(request):
     return render(request, 'formula/awards.html', context)
 
 def technologies(request):
-    categories = Category.objects.all()
-    products = Product.objects.all()
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
+
     context = {
         'categories' : categories,
         'products'   : products
@@ -54,8 +56,9 @@ def technologies(request):
     return render(request, 'formula/technologies.html', context)
 
 def clients(request):
-    categories = Category.objects.all()
-    products = Product.objects.all()
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
+
     context = {
         'categories' : categories,
         'products'   : products
@@ -63,8 +66,9 @@ def clients(request):
     return render(request, 'formula/clients.html', context)
 
 def payment(request):
-    categories = Category.objects.all()
-    products = Product.objects.all()
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
+
     context = {
         'categories' : categories,
         'products'   : products
@@ -72,8 +76,9 @@ def payment(request):
     return render(request, 'formula/payment.html', context)
 
 def delivery(request):
-    categories = Category.objects.all()
-    products = Product.objects.all()
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
+
     context = {
         'categories' : categories,
         'products'   : products
@@ -81,8 +86,9 @@ def delivery(request):
     return render(request, 'formula/delivery.html', context)
 
 def contacts(request):
-    categories = Category.objects.all()
-    products = Product.objects.all()
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
+
     context = {
         'categories' : categories,
         'products'   : products
