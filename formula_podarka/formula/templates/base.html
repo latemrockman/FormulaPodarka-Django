@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
 <header>
 	<nav class="dws-menu">
 		<ul>
@@ -21,42 +22,22 @@
 
 
 			<li><a href="{% url 'catalog-page' %}"><i class="fa fa-shopping-cart"></i>Каталог</a>
-				<ul>
-					<li><a href="#">Панно и плакетки с барельефом</a>
-						<ul>
-							<li><a href="#">Панно 1</a></li>
-							<li><a href="#">Панно 2</a></li>
-							<li><a href="#">Панно 3</a></li>
-						</ul>
-					</li>
 
 
-					<li><a href="#">Часы с барельефом</a>
-						<ul>
-							<li><a href="#">Часы 1</a></li>
-							<li><a href="#">Часы 2</a></li>
-							<li><a href="#">Часы 3</a></li>
-						</ul>
-					</li>
+					<ul>
+					{% for field_categiry in categories%}
+					    <li><a href="">{{ field_categiry }}</a>
+					    <ul>
+					    {% for field_product in products%}
+					        {% if field_product.category == field_categiry%}
+					        <li><a href="">{{field_product}}</a></li>
+					        {% endif %}
+					    {% endfor %}
+					    </ul>
+					    </li>
 
-
-					<li><a href="#">Сувениры из стекла</a>
-						<ul>
-							<li><a href="#">Сувенир 1</a></li>
-							<li><a href="#">Сувенир 2</a></li>
-							<li><a href="#">Сувенир 3</a></li>
-						</ul>
-					</li>
-
-
-					<li><a href="#">Упаковка</a>
-						<ul>
-							<li><a href="#">Упаковка 1</a></li>
-							<li><a href="#">Упаковка 2</a></li>
-							<li><a href="#">Упаковка 3</a></li>
-						</ul>
-					</li>
-				</ul>
+					{% endfor %}
+					</ul>
 
 
 
@@ -85,6 +66,6 @@
 {% block content %}
 
 {% endblock %}
-<p>Текст</p>
+
 </body>
 </html>

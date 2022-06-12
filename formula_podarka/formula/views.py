@@ -1,35 +1,93 @@
 from django.shortcuts import render
+from .models import Category, Product
 
 # Create your views here.
 
 
 
 def index(request):
-    return render(request, 'formula/index.html', {})
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    context = {
+        'categories' : categories,
+        'products'   : products
+    }
+    return render(request, 'formula/index.html', context)
 
 def catalog(request):
-    return render(request, 'formula/catalog.html', {})
+
+    categories = Category.objects.all()
+    products = Product.objects.all()
+
+    context = {
+        'categories' : categories,
+        'products'   : products
+    }
+
+    return render(request, 'formula/catalog.html', context)
 
 def company(request):
-    return render(request, 'formula/company.html', {})
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    context = {
+        'categories' : categories,
+        'products'   : products
+    }
+    return render(request, 'formula/company.html', context)
 
 def awards(request):
-    return render(request, 'formula/awards.html', {})
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    context = {
+        'categories' : categories,
+        'products'   : products
+    }
+    return render(request, 'formula/awards.html', context)
 
 def technologies(request):
-    return render(request, 'formula/technologies.html', {})
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    context = {
+        'categories' : categories,
+        'products'   : products
+    }
+    return render(request, 'formula/technologies.html', context)
 
 def clients(request):
-    return render(request, 'formula/clients.html', {})
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    context = {
+        'categories' : categories,
+        'products'   : products
+    }
+    return render(request, 'formula/clients.html', context)
 
 def payment(request):
-    return render(request, 'formula/payment.html', {})
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    context = {
+        'categories' : categories,
+        'products'   : products
+    }
+    return render(request, 'formula/payment.html', context)
 
 def delivery(request):
-    return render(request, 'formula/delivery.html', {})
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    context = {
+        'categories' : categories,
+        'products'   : products
+    }
+    return render(request, 'formula/delivery.html', context)
 
 def contacts(request):
-    return render(request, 'formula/contacts.html', {})
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    context = {
+        'categories' : categories,
+        'products'   : products
+    }
+    return render(request, 'formula/contacts.html', context)
 
 
 
