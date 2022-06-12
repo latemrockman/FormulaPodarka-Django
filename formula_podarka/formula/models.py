@@ -8,5 +8,9 @@ class Product(models.Model):
     article = models.IntegerField()
     title = models.CharField(max_length=50)
     description = models.TextField()
-    price = models.IntegerField()
+    price = models.FloatField()
+
+    class Meta:
+        verbose_name = 'Товар'
+        verbose_name_plural = 'Товары'
 
