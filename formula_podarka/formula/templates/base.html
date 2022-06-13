@@ -30,7 +30,7 @@
 					    <ul>
 					    {% for field_product in products%}
 					        {% if field_product.category == field_category%}
-					        <li><a href="">{{field_product}}</a></li>
+					        <li><a href="{% url 'product-page' field_category.slug field_product.slug %}">{{field_product}}</a></li>
 					        {% endif %}
 					    {% endfor %}
 					    </ul>
