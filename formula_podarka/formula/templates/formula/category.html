@@ -7,6 +7,11 @@
 {% block content %}
 <h1>{{category_name}}</h1>
 
+<a href="{% url 'catalog-page' %}">Каталог</a> ->
+<a href="{% url 'category-page' category_slug %}">{{category_name}}</a>
+
+<br><br>
+
 <ul>
 {% for prod in products_of_category %}
     <li><a href="{% url 'product-page' category_slug prod.slug %}">{{prod.title}}</a> - Артикул - {{prod.article}} | Цена - {{prod.price}} руб.</li>

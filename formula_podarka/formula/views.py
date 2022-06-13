@@ -50,9 +50,17 @@ def product(request, category_slug, product_slug):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
 
+    category_name = Category.objects.get(slug=category_slug).name.lower().capitalize()
+    product_name = Product.objects.get(slug=product_slug).title.lower().capitalize()
+
+
     context = {
         'categories' : categories,
-        'products'   : products
+        'products'   : products,
+        'category_slug': category_slug,
+        'product_slug': product_slug,
+        'category_name': category_name,
+        'product_name': product_name
     }
 
 
