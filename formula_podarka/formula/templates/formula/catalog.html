@@ -10,7 +10,7 @@
 
 <ul>
 {% for field in categories %}
-    <li><a href="">{{field}}</a></li>
+    <li><a href="{% url 'category-page' field.slug %}">{{field}}</a></li>
 
 {% endfor %}
 </ul>

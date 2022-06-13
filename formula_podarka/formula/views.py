@@ -23,9 +23,22 @@ def catalog(request):
         'products'   : products
     }
 
-
-
     return render(request, 'formula/catalog.html', context)
+
+
+def category(request, category_slug):
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
+
+    context = {
+        'categories' : categories,
+        'products'   : products,
+        'category_slug': category_slug
+    }
+    return render(request, 'formula/category.html', context)
+
+
+
 
 def company(request):
     categories = Category.objects.order_by('-id')
