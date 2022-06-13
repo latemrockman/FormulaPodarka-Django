@@ -23,6 +23,8 @@ def catalog(request):
         'products'   : products
     }
 
+
+
     return render(request, 'formula/catalog.html', context)
 
 def company(request):
