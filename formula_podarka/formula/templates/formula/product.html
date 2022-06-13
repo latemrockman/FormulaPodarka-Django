@@ -5,7 +5,7 @@
 
 
 {% block content %}
-<h1>Карточка товара</h1>
+<h1>{{product_name}}</h1>
 
 <a href="{% url 'catalog-page' %}">Каталог</a> ->
 <a href="{% url 'category-page' category_slug %}">{{category_name}}</a> ->
@@ -13,6 +13,16 @@
 
 <br><br>
 
-<p>Данные на товар</p>
+<b>Артикур: </b>{{product_article}}
+<br>
+<b>Название: </b>{{product_name}}
+<br>
+<b>Описание товара:</b>
+<br>
+{{product_description}}
+<br>
+<b>Цена: </b> {{product_price}}
+
+
 
 {% endblock %}

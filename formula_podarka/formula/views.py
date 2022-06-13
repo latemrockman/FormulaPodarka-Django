@@ -52,6 +52,9 @@ def product(request, category_slug, product_slug):
 
     category_name = Category.objects.get(slug=category_slug).name.lower().capitalize()
     product_name = Product.objects.get(slug=product_slug).title.lower().capitalize()
+    product_article = Product.objects.get(slug=product_slug).article
+    product_description = Product.objects.get(slug=product_slug).description
+    product_price = Product.objects.get(slug=product_slug).price
 
 
     context = {
@@ -60,7 +63,10 @@ def product(request, category_slug, product_slug):
         'category_slug': category_slug,
         'product_slug': product_slug,
         'category_name': category_name,
-        'product_name': product_name
+        'product_name': product_name,
+        'product_article': product_article,
+        'product_description': product_description,
+        'product_price': product_price
     }
 
 
