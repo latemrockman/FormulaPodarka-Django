@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import include
 
 
 admin.site.site_header = 'Администрирование ФОРМУЛА ПОДАРКА'
 admin.site.index_title = 'Личный кабинет'
 
 urlpatterns = [
+    path('grappelli/', include('grappelli.urls')), # grappelli URLS
     path('admin/', admin.site.urls),
     path('', include('formula.urls'))
 ]
