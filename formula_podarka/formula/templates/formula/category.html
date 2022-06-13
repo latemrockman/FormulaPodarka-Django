@@ -5,10 +5,14 @@
 
 
 {% block content %}
-<h1>Название категории товаров</h1>
+<h1>{{category_name}}</h1>
 
+<ul>
+{% for prod in products_of_category %}
+    <li><a href="">{{prod.title}}</a> - Артикул - {{prod.article}} | Цена - {{prod.price}} руб.</li>
+{% endfor %}
+</ul>
 
-Категория - {{category_slug}}
 
 
 {% endblock %}

@@ -25,11 +25,11 @@
 
 
 					<ul>
-					{% for field_categiry in categories%}
-					    <li><a href="">{{ field_categiry }}</a>
+					{% for field_category in categories %}
+					    <li><a href="{% url 'category-page' field_category.slug %}">{{ field_category }}</a>
 					    <ul>
 					    {% for field_product in products%}
-					        {% if field_product.category == field_categiry%}
+					        {% if field_product.category == field_category%}
 					        <li><a href="">{{field_product}}</a></li>
 					        {% endif %}
 					    {% endfor %}
