@@ -70,33 +70,55 @@
             <div class="col-12">
               <nav class="site-navigation text-right ml-auto " role="navigation">
 
+                <!-- МЕНЮ --!>
+
+
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                <li><a href="index.html#home-section" class="nav-link">Home</a></li>
-                <li><a href="index.html#services-section" class="nav-link">Services</a></li>
+
+
+
+                <li><a href="{% url 'home-page' %}" class="nav-link">Главная</a></li>
 
                 <li class="has-children">
-                  <a href="index.html#about-section" class="nav-link">About Us</a>
+                  <a href="{% url 'catalog-page' %}" class="nav-link active" >Каталог</a>
                   <ul class="dropdown arrow-top">
-                    <li><a href="index.html#team-section" class="nav-link">Team</a></li>
-                    <li><a href="index.html#pricing-section" class="nav-link">Pricing</a></li>
-                    <li><a href="index.html#faq-section" class="nav-link">FAQ</a></li>
+                    {% for field_category in categories %}
                     <li class="has-children">
-                      <a href="#">More Links</a>
+                      <a href="{% url 'category-page' field_category.slug %}">{{field_category}}</a>
                       <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
+                        {% for field_product in products%}
+                            {% if field_product.category == field_category%}
+                            <li><a href="{% url 'product-page' field_category.slug field_product.slug %}">{{field_product}}</a></li>
+                            {% endif %}
+                        {% endfor %}
                       </ul>
                     </li>
+                    {% endfor %}
+                    </ul>
+                  </li>
+
+                <li class="has-children">
+                  <a href="{% url 'company-page' %}">О компании</a>
+                  <ul class="dropdown">
+                    <li><a href="{% url 'awards-page' %}">Награды и благодарности</a></li>
+                    <li><a href="{% url 'technologies-page' %}">Технологии</a></li>
                   </ul>
                 </li>
 
-                <li><a href="index.html#press-section" class="nav-link active">Press</a></li>
+                <li class="has-children">
+                  <a href="{% url 'clients-page' %}">Клиентам</a>
+                  <ul class="dropdown">
+                    <li><a href="{% url 'payment-page' %}">Оплата</a></li>
+                    <li><a href="{% url 'delivery-page' %}">Доставка</a></li>
+                  </ul>
+                </li>
 
-                <li><a href="index.html#testimonials-section" class="nav-link">Testimonials</a></li>
-                <li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
-                <li><a href="index.html#contact-section" class="nav-link">Contact</a></li>
-              </ul>
+                <li><a href="{% url 'contacts-page' %}" class="nav-link">Контакты</a></li>
+
+              </l>
+
+              <!-- МЕНЮ --!>
+
               </nav>
 
             </div>
