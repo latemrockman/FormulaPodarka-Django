@@ -37,9 +37,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">formulapodarka@mail.ru</span></a>
+            <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">info@formulapodarka.ru</span></a>
             <span class="mx-md-2 d-inline-block"></span>
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block">1+ (234) 5678 9101</span></a>
+            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block">8 495 665 23 43</span></a>
 
 
             <div class="float-right">
@@ -64,7 +64,7 @@
 
 
             <div class="site-logo">
-              <a href="index.html" class="text-black"><span class="text-primary">Unearth</a>
+              <a href="{% url 'home-page' %}"><span class="text-primary">Формула подарка</a>
             </div>
 
             <div class="col-12">
@@ -159,39 +159,47 @@
           <div class="col-md-6">
             <div class="row">
               <div class="col-md-8">
-                <h2 class="footer-heading mb-4">About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+                <h2 class="footer-heading mb-4">Контакты</h2>
+
+                <p>Телефон: 8 495 665 23 43</p>
+                <p>E-mail: info@formulapodarka.ru</p>
+                <p>Режим работы: с 09:00 до 18:00 (пн-пт)</p>
+
+
               </div>
+
               <div class="col-md-4 ml-auto">
-                <h2 class="footer-heading mb-4">Features</h2>
+                <h2 class="footer-heading mb-4">Карта сайта</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Press Releases</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="{% url 'home-page' %}">Главная</a></li>
+                  <li><a href="{% url 'catalog-page' %}">Каталог</a></li>
+                  <li><a href="{% url 'company-page' %}">О компании</a></li>
+                  <li><a href="{% url 'clients-page' %}">Клиентам</a></li>
+                  <li><a href="{% url 'contacts-page' %}">Контакты</a></li>
                 </ul>
               </div>
+
+
+
 
             </div>
           </div>
           <div class="col-md-4 ml-auto">
 
             <div class="mb-5">
-              <h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>
+              <h2 class="footer-heading mb-4">Получить коммерческое предложение</h2>
               <form action="#" method="post" class="footer-suscribe-form">
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Введите Email" aria-label="Enter Email" aria-describedby="button-addon2">
                   <div class="input-group-append">
-                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>
+                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Подписаться</button>
                   </div>
                 </div>
               </div>
 
 
-              <h2 class="footer-heading mb-4">Follow Us</h2>
-                <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
+              <h2 class="footer-heading mb-4">Наши контакты</h2>
+                <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
