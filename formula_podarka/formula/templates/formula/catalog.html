@@ -11,12 +11,30 @@
 <br><br>
 
 
-<ul>
+<div class="container">
+
 {% for field in categories %}
-    <li><a href="{% url 'category-page' field.slug %}">{{field}}</a></li>
+        <div class="row">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="block-heading-1">
+              <span>В стадии разработки</span>
+              <h2>Фото</h2>
+            </div>
+          </div>
+
+
+          <div class="col-lg-8">
+            <ul class="list-unstyled">
+              <li class="mb-4">
+                <h2 class="h4"><a href="{% url 'category-page' field.slug %}" class="text-black">{{field}}</a></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis, perferendis molestias commodi adipisci.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis, perferendis molestias commodi adipisci.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis, perferendis molestias commodi adipisci.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis, perferendis molestias commodi adipisci.</p>
+              </li>
+            </ul>
+          </div>
 
 {% endfor %}
-</ul>
+
+</div>
 
 
 {% endblock %}
