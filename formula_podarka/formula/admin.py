@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Category, Info
 
 # Register your models here.
 
@@ -26,5 +26,13 @@ class ProductAdmin(admin.ModelAdmin):
 
     readonly_fields = ['slug']
     #prepopulated_fields = {'slug': ('title',)}
+
+
+@admin.register(Info)
+class InfoAdmin(admin.ModelAdmin):
+    list_display = []
+    list_per_page = 15
+
+
 
 
