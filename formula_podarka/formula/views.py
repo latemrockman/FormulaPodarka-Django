@@ -34,6 +34,7 @@ def category(request, category_slug):
 
     category_id = Category.objects.get(slug=category_slug).id
     category_name = Category.objects.get(slug=category_slug).name.lower().capitalize()
+    category_description = Category.objects.get(slug=category_slug).description
     products_of_category = Product.objects.filter(category_id=category_id)
 
     context = {
@@ -42,7 +43,8 @@ def category(request, category_slug):
         'category_slug': category_slug,
         'products_of_category': products_of_category,
         'category_id': category_id,
-        'category_name': category_name
+        'category_name': category_name,
+        'category_description': category_description
     }
     return render(request, 'formula/category.html', context)
 

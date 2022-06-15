@@ -12,6 +12,8 @@
 
 <br><br>
 
+<p>{{category_description}}</p>
+
 <ul>
 {% for prod in products_of_category %}
     <li><a href="{% url 'product-page' category_slug prod.slug %}">{{prod.title}}</a> - Артикул - {{prod.article}} | Цена - {{prod.price}} руб.</li>
