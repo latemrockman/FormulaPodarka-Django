@@ -29,14 +29,14 @@
             <ul class="list-unstyled">
               <li class="mb-4">
                 <h2 class="h4"><a href="{% url 'category-page' field.slug %}" class="text-black">{{field}}</a></h2>
-                <p>Описание категории - {{categories.description}}</p>
+                <p> {{field.description}} </p>
               </li>
             </ul>
 
 
           </div>
           </div>
-
+  <br>
 {% endfor %}
 
 </div>
