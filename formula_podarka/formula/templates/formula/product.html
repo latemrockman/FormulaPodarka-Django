@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
 {% block title %}Главная страница{% endblock%}
@@ -13,16 +14,29 @@
 
 <br><br>
 
-<b>Артикур: </b>{{product_article}}
+
 <br>
-<b>Название: </b>{{product_name}}
-<br>
-<b>Описание товара:</b>
-<br>
-{{product_description}}
-<br>
-<b>Цена: </b> {{product_price}} руб.
 
 
+
+<div class="produkt">
+    <div class="foto">
+        <img src="{% static 'images/no-img.jpg' %}" alt="Фото {{product_name}}">
+            <b>Артикур: </b>{{product_article}}
+            <br>
+            <b>Цена: </b> {{product_price}} руб.
+
+    </div>
+    <div class="info">
+        <b>Характеристики</b>
+    </div>
+    <div class="description">
+        <b>Описание товара:</b>
+        <br>
+        {{product_description}}
+        <br>
+    </div>
+
+</div>
 
 {% endblock %}
