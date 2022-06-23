@@ -111,6 +111,33 @@ def technologies(request):
     return render(request, 'formula/technologies.html', context)
 
 
+
+def technology(request, technology_slug):
+    categories = Category.objects.order_by('-id')
+    products = Product.objects.order_by('-id')
+    technologies = Technologies.objects.order_by('-id')
+
+
+    technology_title = Technologies.objects.get(slug=technology_slug).title.lower().capitalize()
+    technology_description = Technologies.objects.get(slug=technology_slug).description.lower().capitalize()
+
+
+
+
+
+    context = {
+        'categories': categories,
+        'products': products,
+        'technologies': technologies,
+        'technology_slug': technology_slug,
+        'technology_title': technology_title,
+        'technology_description': technology_description
+
+    }
+    return render(request, 'formula/technology.html', context)
+
+
+
 def clients(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')

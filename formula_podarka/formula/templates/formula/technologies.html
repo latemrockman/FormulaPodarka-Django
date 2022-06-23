@@ -18,7 +18,7 @@
 
 
 {% for technology in technologies %}
-        <h2 class="h4"><a href="" class="text-black">{{technology.title}}</a></h2>
+        <h2 class="h4"><a href="{% url 'technology-page' technology.slug %}" class="text-black">{{technology.title}}</a></h2>
         <div class="tehno-preview">{{technology.description}}</div>
         <a href="">Подробнее</a>
 <br><br>

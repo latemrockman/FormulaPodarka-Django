@@ -17,7 +17,7 @@ urlpatterns = [
     path('company/', views.company, name='company-page'),
     path('company/awards/', views.awards, name='awards-page'),
     path('company/technologies/', views.technologies, name='technologies-page'),
-    path('company/technologies/<slug:technology_slug>', views.technologies, name='technology-page'),
+    path('company/technologies/<slug:technology_slug>/', views.technology, name='technology-page'),
 
     path('clients/', views.clients, name='clients-page'),
     path('clients/payment/', views.payment, name='payment-page'),
