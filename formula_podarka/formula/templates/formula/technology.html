@@ -10,6 +10,15 @@
 {% block content %}
 
 <h1>{{technology_title}}</h1>
+
+
+<a href="{% url 'company-page' %}">О компании</a> ->
+<a href="{% url 'technologies-page' %}">Технологии</a> ->
+<a href="{% url 'technology-page' technology_slug %}">{{technology_title}}</a>
+
+
+<br><br>
+
 <br>
 <p><img src="{% static 'images/hero_2.jpg' %}" alt="Image" class="img-fluid"></p>
 <p>{{technology_description}}</p>
