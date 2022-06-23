@@ -62,7 +62,13 @@ class Info(models.Model):
     karta = models.CharField(default='', max_length=200)
     meta_tags = models.TextField()
 
+class Tehnologies(models.Model):
+    title = models.CharField('', max_length=30)
+    description = models.TextField()
 
+    class Meta:
+        verbose_name = 'Технология'
+        verbose_name_plural = 'Технологии'
 
 
 

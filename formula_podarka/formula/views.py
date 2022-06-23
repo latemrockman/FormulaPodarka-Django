@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Category, Product
+from .models import Category, Product, Tehnologies
 
 
 # Create your views here.
@@ -99,10 +99,13 @@ def awards(request):
 def technologies(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
+    tehnologies = Tehnologies.objects.order_by('-id')
+
 
     context = {
         'categories': categories,
-        'products': products
+        'products': products,
+        'tehnologies': tehnologies
     }
     return render(request, 'formula/technologies.html', context)
 
