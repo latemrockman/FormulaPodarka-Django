@@ -3,7 +3,7 @@ p {
 }
 
 .produkt {
-    border: 2px solid black;
+    border: 2px solid white;
     height: 800px;
     display: grid;
     grid-template-columns: repeat(2, 300px);
@@ -18,7 +18,7 @@ p {
 }
 
 .produkt div {
-    border: 2px solid green;
+    border: 2px solid white;
 }
 
 .foto {
