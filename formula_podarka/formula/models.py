@@ -62,13 +62,23 @@ class Info(models.Model):
     karta = models.CharField(default='', max_length=200)
     meta_tags = models.TextField()
 
-class Tehnologies(models.Model):
+class Technologies(models.Model):
     title = models.CharField('', max_length=30)
     description = models.TextField()
+    slug = models.SlugField(default='', null=False, db_index=True)
+
+
 
     class Meta:
         verbose_name = 'Технология'
         verbose_name_plural = 'Технологии'
+
+    def __str__(self):
+        return f'{self.title}'
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(text2translit(self.title))
+        super(Technologies, self).save(*args, **kwargs)
 
 
 

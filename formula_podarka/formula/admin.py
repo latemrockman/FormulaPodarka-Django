@@ -1,11 +1,12 @@
 from django.contrib import admin
-from .models import Product, Category, Info, Tehnologies
+from .models import Product, Category, Info, Technologies
 
 # Register your models here.
 
-@admin.register(Tehnologies)
-class TehnologiesyAdmin(admin.ModelAdmin):
+@admin.register(Technologies)
+class TechnologiesyAdmin(admin.ModelAdmin):
     list_display = ['title']
+    fields = ['title', 'description']
     list_per_page = 15
 
 
