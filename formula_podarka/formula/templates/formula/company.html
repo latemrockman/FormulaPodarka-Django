@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 
+
 {% block title %}О компании{% endblock%}
 
 
@@ -28,9 +29,35 @@ Cледуя всем вашим пожеланиям и предлагая св�
 Cоздайте ваш уникальный подарок вместе с Formulapodarka!
 </p>
 
-<a href="{% url 'awards-page' %}">Награды и благодарности</a> <br>
-<a href="{% url 'technologies-page' %}">Технологии</a> <br>
 
+{% load static %}
+<div class="site-section" id="blog-section">
+  <div class="container">
+    <div class="row">
+
+        <!-- Награды и благодарности -->
+        <div class="col-md-6 col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="">
+          <div>
+          <a href="{% url 'awards-page' %}" class="mb-4 d-block"><img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid rounded"></a>
+          <h2><a href="{% url 'awards-page' %}">Награды и благодарности</a></h2>
+          </div>
+        </div>
+
+
+        <!-- Технологии -->
+        <div class="col-md-6 col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="">
+          <div>
+          <a href="{% url 'technologies-page' %}" class="mb-4 d-block"><img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid rounded"></a>
+          <h2><a href="{% url 'technologies-page' %}">Технологии</a></h2>
+          </div>
+        </div>
+
+
+
+
+    </div>
+  </div>
+</div>
 
 
 {% endblock %}
