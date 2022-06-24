@@ -4,7 +4,7 @@
 {% block css_additional %}
 {% endblock %}
 
-{% block title %}Главная страница{% endblock%}
+{% block title %}{{technology_title|capfirst}}{% endblock%}
 
 
 {% block content %}
@@ -22,17 +22,6 @@
 <br>
 <p><img src="{% static 'images/hero_2.jpg' %}" alt="Image" class="img-fluid"></p>
 <p>{{technology_description}}</p>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
