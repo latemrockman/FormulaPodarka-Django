@@ -46,6 +46,7 @@
             <div class="site-logo">
               <!--<a href="{% url 'home-page' %}"><span class="text-primary">Формула подарка</a> -->
               <a href="{% url 'home-page' %}"><img src="{% static 'images/logo_formula.jpg' %}" alt="Image" class="img-fluid"></a>
+              <p>!!! {{index_active}}</p>
             </div>
 
             <div class="col-12">
@@ -58,10 +59,10 @@
 
 
 
-                <li><a href="{% url 'home-page' %}" class="nav-link">Главная</a></li>
+                <li><a href="{% url 'home-page' %}" class="nav-link{{index_active}}">Главная</a></li>
 
                 <li class="has-children">
-                  <a href="{% url 'catalog-page' %}" class="nav-link active" >Каталог</a>
+                  <a href="{% url 'catalog-page' %}" class="nav-link{{catalog_active}}" >Каталог</a>
                   <ul class="dropdown arrow-top">
                     {% for field_category in categories %}
                     <li class="has-children">
@@ -79,7 +80,7 @@
                   </li>
 
                 <li class="has-children">
-                  <a href="{% url 'company-page' %}">О компании</a>
+                  <a href="{% url 'company-page' %}" class="nav-link{{company_active}}">О компании</a>
                   <ul class="dropdown">
                     <li><a href="{% url 'awards-page' %}">Награды и благодарности</a></li>
                     <li><a href="{% url 'technologies-page' %}">Технологии</a></li>
@@ -87,14 +88,14 @@
                 </li>
 
                 <li class="has-children">
-                  <a href="{% url 'clients-page' %}">Клиентам</a>
+                  <a href="{% url 'clients-page' %}" class="nav-link{{clients_active}}">Клиентам</a>
                   <ul class="dropdown">
                     <li><a href="{% url 'payment-page' %}">Оплата</a></li>
                     <li><a href="{% url 'delivery-page' %}">Доставка</a></li>
                   </ul>
                 </li>
 
-                <li><a href="{% url 'contacts-page' %}" class="nav-link">Контакты</a></li>
+                <li><a href="{% url 'contacts-page' %}" class="nav-link{{contacts_active}}">Контакты</a></li>
 
               </l>
 

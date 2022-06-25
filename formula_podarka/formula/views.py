@@ -8,9 +8,11 @@ from .models import Category, Product, Technologies
 def index(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
+    index_active = ' active'
     context = {
         'categories': categories,
-        'products': products
+        'products': products,
+        'index_active': index_active
     }
     return render(request, 'formula/index.html', context)
 
@@ -18,11 +20,13 @@ def index(request):
 def catalog(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
+    catalog_active = ' active'
 
 
     context = {
         'categories': categories,
-        'products': products
+        'products': products,
+        'catalog_active': catalog_active
     }
 
     return render(request, 'formula/catalog.html', context)
@@ -77,10 +81,13 @@ def product(request, category_slug, product_slug):
 def company(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
+    company_active = ' active'
+
 
     context = {
         'categories': categories,
-        'products': products
+        'products': products,
+        'company_active': company_active
     }
     return render(request, 'formula/company.html', context)
 
@@ -141,10 +148,12 @@ def technology(request, technology_slug):
 def clients(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
+    clients_active = ' active'
 
     context = {
         'categories': categories,
-        'products': products
+        'products': products,
+        'clients_active': clients_active
     }
     return render(request, 'formula/clients.html', context)
 
@@ -174,10 +183,12 @@ def delivery(request):
 def contacts(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
+    contacts_active = ' active'
 
     context = {
         'categories': categories,
-        'products': products
+        'products': products,
+        'contacts_active': contacts_active
     }
     return render(request, 'formula/contacts.html', context)
 

@@ -24,7 +24,7 @@
           <a href="{% url 'product-page' category_slug prod.slug %}" class="mb-4 d-block"><img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid rounded"></a>
           <h2 align="center"><a href="{% url 'product-page' category_slug prod.slug %}">{{prod.title}}</a></h2>
           <p class="text-muted mb-3 text-uppercase small des-product"><span class="mr-2">Артикул: {{prod.article}}</span> <b>Цена от {{prod.price}} руб.</b></p>
-          <p class="des-product">{{prod.description}}</p>
+          <p class="des-product tehno-preview" align="left">{{prod.description}}</p>
           <p class="des-product"><a href="{% url 'product-page' category_slug prod.slug %}">Подробнее</a></p>
           </div>
         </div>
