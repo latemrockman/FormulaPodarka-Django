@@ -40,6 +40,7 @@ def category(request, category_slug):
     category_name = Category.objects.get(slug=category_slug).name.lower().capitalize()
     category_description = Category.objects.get(slug=category_slug).description
     products_of_category = Product.objects.filter(category_id=category_id)
+    catalog_active = ' active'
 
     context = {
         'categories': categories,
@@ -48,7 +49,8 @@ def category(request, category_slug):
         'products_of_category': products_of_category,
         'category_id': category_id,
         'category_name': category_name,
-        'category_description': category_description
+        'category_description': category_description,
+        'catalog_active': catalog_active
     }
     return render(request, 'formula/category.html', context)
 
@@ -62,6 +64,7 @@ def product(request, category_slug, product_slug):
     product_article = Product.objects.get(slug=product_slug).article
     product_description = Product.objects.get(slug=product_slug).description
     product_price = Product.objects.get(slug=product_slug).price
+    catalog_active = ' active'
 
     context = {
         'categories': categories,
@@ -72,7 +75,8 @@ def product(request, category_slug, product_slug):
         'product_name': product_name,
         'product_article': product_article,
         'product_description': product_description,
-        'product_price': product_price
+        'product_price': product_price,
+        'catalog_active': catalog_active
     }
 
     return render(request, 'formula/product.html', context)
@@ -95,10 +99,12 @@ def company(request):
 def awards(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
+    company_active = ' active'
 
     context = {
         'categories': categories,
-        'products': products
+        'products': products,
+        'company_active': company_active
     }
     return render(request, 'formula/awards.html', context)
 
@@ -107,13 +113,15 @@ def technologies(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
     technologies = Technologies.objects.order_by('-id')
+    company_active = ' active'
 
 
 
     context = {
         'categories': categories,
         'products': products,
-        'technologies': technologies
+        'technologies': technologies,
+        'company_active': company_active
     }
     return render(request, 'formula/technologies.html', context)
 
@@ -161,10 +169,12 @@ def clients(request):
 def payment(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
+    clients_active = ' active'
 
     context = {
         'categories': categories,
-        'products': products
+        'products': products,
+        'clients_active': clients_active
     }
     return render(request, 'formula/payment.html', context)
 
@@ -172,10 +182,12 @@ def payment(request):
 def delivery(request):
     categories = Category.objects.order_by('-id')
     products = Product.objects.order_by('-id')
+    clients_active = ' active'
 
     context = {
         'categories': categories,
-        'products': products
+        'products': products,
+        'clients_active': clients_active
     }
     return render(request, 'formula/delivery.html', context)
 
