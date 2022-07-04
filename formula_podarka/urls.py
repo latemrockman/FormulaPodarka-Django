@@ -22,7 +22,7 @@ admin.site.site_header = 'Администрирование ФОРМУЛА ПО
 admin.site.index_title = 'Личный кабинет'
 
 urlpatterns = [
-    path('grappelli/', include('grappelli.urls')), # grappelli URLS
+#    path('grappelli/', include('grappelli.urls')), # grappelli URLS
     path('admin/', admin.site.urls),
     path('', include('formula.urls'))
 ]

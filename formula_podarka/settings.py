@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-9jz%6#^9f-gaosm64ol4vmvif@a#tpln!7o7lf00wx^f4oahba
 # Application definition
 
 INSTALLED_APPS = [
-    'grappelli',
+#    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,7 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.request',
+#                'django.template.context_processors.request',
             ],
         },
     },
@@ -129,4 +129,4 @@ STATICFILES_DIRS = [
 ]
 
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+#STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
